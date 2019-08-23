@@ -13,6 +13,7 @@ WORKDIR /go/src/github.com/s-take/go-http-sample
 # RUN  dep ensure
 
 COPY main.go main.go
+RUN go get golang.org/x/net/netutil
 
 RUN go install ./...
 
