@@ -1,7 +1,7 @@
 FROM golang:1.11-alpine AS build
 
 # go buildに最低限のツールとsrcへの移動
-RUN apk --no-cache add gcc g++ make ca-certificates
+RUN apk --no-cache add gcc g++ make ca-certificates git
 WORKDIR /go/src/github.com/s-take/go-http-sample
 
 # もしdepがいるなら
